@@ -2,9 +2,11 @@
 - Info on how I created the template, and the aliases I used in Powershell with no script, only the aliases.
 
 > Template only for opening with Neovim, Powershell alias script bellow:
+
 `if (!(Test-Path $PROFILE)) { New-Item -Type File -Path $PROFILE -Force }; Add-Content $PROFILE 'function cppnew ($f) { Copy-Item "$HOME\.templates\template.cpp" $f; nvim $f }'`
 
 > Templates in all 3 editors I used: Neovim, Vim and VS Code: (the lines bellow create a different alias for each different editor, all in one block of code easily executed by Powershell in a block of code)
+
 `Add-Content $PROFILE '
 function cppnew ($f) { Copy-Item "$HOME\.templates\template.cpp" $f; nvim $f }
 function cppvim ($f) { Copy-Item "$HOME\.templates\template.cpp" $f; vim $f }
