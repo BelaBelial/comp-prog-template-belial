@@ -17,6 +17,12 @@ function cppcode ($f) { Copy-Item "$HOME\.templates\template.cpp" $f; code $f }
 
 ---
 
+> Simply create file without opening any editor using Powershell and Copy-Item logic (another alias):
+
+`Add-Content $PROFILE 'function cppcreate ($f) { Copy-Item "$HOME\.templates\template.cpp" $f; Write-Host "File $f created!" -ForegroundColor Green }' `
+
+---
+
 > Command to apply the updates:
 `. $PROFILE`
 
@@ -26,6 +32,7 @@ function cppcode ($f) { Copy-Item "$HOME\.templates\template.cpp" $f; code $f }
 - Neovim: `cppnew *file_name*.cpp`
 - Vim: `cppvim *file_name*.cpp`
 - VS Code: `cppcode *file_name.cpp*`
+- Just create: `cppcreate *file_name*.cpp`
 
 # Using my template:
 - To use the template (it's currently very simple and not very optimized), you have to clone this repository in your $HOME path, where your user is, and create a `.templates` folder. Inside it, you gotta have the `templa.cpp` file available in this repo.
