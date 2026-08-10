@@ -33,7 +33,6 @@ function cppcode ($f) { Copy-Item "$HOME\.templates\template.cpp" $f; code $f }
 - Vim: `cppvim *file_name*.cpp`
 - VS Code: `cppcode *file_name.cpp*`
 - Just create: `cppcreate *file_name*.cpp`
-- VS Code: `cppcode *file_name*.cpp`
 
 # Using my template:
 - To use the template (it's currently very simple and not very optimized), you have to clone this repository in your $HOME path, where your user is, and create a `.templates` folder. Inside it, you gotta have the `template.cpp` file available in this repo.
